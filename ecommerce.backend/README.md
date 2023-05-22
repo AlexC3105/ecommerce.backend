@@ -1,96 +1,68 @@
-# Module 14 Mini-Project: Crowdfunding App
+Ecommerce Backend Homework
+This is an ecommerce backend application developed as part of the UCF Bootcamp Module 13 homework. The application provides a RESTful API for managing products, categories, and tags for an ecommerce platform.
 
-In this mini-project, you will work with a group to build a full-stack crowdfunding app using Node.js, Express.js, Sequelize, Handlebars.js, and MVC architecture.
+Table of Contents
+Installation
+Usage
+Routes
+Technologies Used
+Contributing
+License
+Questions
+Installation
+To install and run the ecommerce backend application, follow these steps:
 
-## User Stories
+Clone the repository to your local machine.
+Navigate to the project's root directory.
+Run npm install to install the required dependencies.
+Set up the database:
+Create a MySQL database.
+Update the connection details in the .env file.
+Run the database schema using npm run db:create.
+Seed the database using npm run db:seed.
+Start the application by running npm start.
+Usage
+Once the application is installed and running, you can use a tool like Postman to interact with the API endpoints.
 
-* As a user, I want to see a list of current projects seeking funding.
+Routes
+The ecommerce backend application provides the following API routes:
 
-* As a user, I want to be able to create an account.
+Product Routes:
+GET /api/products: Get all products.
+GET /api/products/:id: Get a specific product by its ID.
+POST /api/products: Create a new product.
+PUT /api/products/:id: Update a specific product by its ID.
+DELETE /api/products/:id: Delete a specific product by its ID.
+Category Routes:
+GET /api/categories: Get all categories.
+GET /api/categories/:id: Get a specific category by its ID.
+POST /api/categories: Create a new category.
+PUT /api/categories/:id: Update a specific category by its ID.
+DELETE /api/categories/:id: Delete a specific category by its ID.
+Tag Routes:
+GET /api/tags: Get all tags.
+GET /api/tags/:id: Get a specific tag by its ID.
+POST /api/tags: Create a new tag.
+PUT /api/tags/:id: Update a specific tag by its ID.
+DELETE /api/tags/:id: Delete a specific tag by its ID.
+For more details on the request and response formats for each route, refer to the documentation or the code itself.
 
-* As a registered user, I want to post my own projects to ask for funding.
+Technologies Used
+The ecommerce backend application is built using the following technologies:
 
-### Acceptance Criteria
+Node.js
+Express.js
+MySQL
+Sequelize ORM
+JavaScript
+Contributing
+Contributions to the ecommerce backend homework are welcome. If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
-* It's done when the `/` homepage route renders a list of all projects from the database.
+License
+This ecommerce backend homework is licensed under the MIT License.
 
-* It's done when the `/project/:id` route renders an individual project's details based on the route parameter id.
+Questions
+If you have any questions or need further assistance, please feel free to contact me via email or GitHub.
 
-* It's done when the `/login` route renders a form to log in and a form to create a new account.
-
-* It's done when an existing user can enter their credentials on the login page to create a session on the server.
-
-* It's done when a new user can create an account on the login page and then be immediately logged in with a session.
-
-* It's done when the `/profile` route renders the logged-in user's projects and a form to create a new project.
-
-* It's done when only a logged in user can visit the `/profile` route.
-
-* It's done when a logged in user is redirected to `/profile` when they try to visit `/login` again.
-
-* It's done when a user on the profile page can use the form to create a new project in the database.
-
-* It's done when a user on the profile page can select a "Delete" button to remove their project from the database.
-
-* It's done when a logged-in user can select a "Logout" button to remove their session.
-
-* It's done when the session for a logged-in user expires after a set time.
-
-* It's done when the API routes to create and delete posts are protected from non logged-in users.
-
-* It's done when the code is organized using MVC architecture.
-
-* It's done when the views are rendered with Handlebars.js templates.
-
-## Specifications 
-
-* The database models have the following fields and associations:
-
-  * `User`
-
-    * `id`: primary key
-
-    * `name`
-
-    * `email`
-
-    * `password`
-
-  * `Project`
-
-    * `id`: primary key
-
-    * `name`
-
-    * `description`
-
-    * `date_created`
-
-    * `needed_funding`
-
-    * `user_id`: foreign key that references `User.id`
-
-  * Users have many projects, and projects belong to a user.
-
-    * If a user is deleted, all associated projects are also deleted.
-
----
-
-## 💡 Hints
-
-* What tools can you use to test the existing API routes if you don't yet have a front end?
-
-* Where would you place the client-side JavaScript for capturing form data?
-
-* How can middleware help protect routes from non logged-in users?
-
-* How can Handlebars.js helpers (both built-in and custom) be used to render the desired results?
-
-## 🏆 Bonus
-
-If you have completed this activity, work through the following challenge with your partner to further your knowledge:
-
-* Add an `/edit/:id` route for logged in users to update their projects' details. Then deploy the app to Heroku!
-
----
-© 2023 edX Boot Camps LLC. Confidential and Proprietary. All Rights Reserved.
+Email: sniper3105@gmail.com
+GitHub: AlexC3105
